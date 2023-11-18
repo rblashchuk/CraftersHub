@@ -1,0 +1,281 @@
+body {
+    font-family: 'Courier New', serif;
+    background-color: #333;
+    color: #ddd;
+    background-image: url('photo_2023-11-14_17-33-35.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    margin: 0;
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+.header, main, .footer {
+    width: 80%; /* Set the maximum width for these sections */
+    margin: 0 auto; /* Center these sections */
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #4CAF50;
+    padding-left: 10px;
+    color: #999999;
+}
+
+.header {
+    position: relative;
+    background-color: rgba(34, 34, 34, 0.8);
+    color: #aaa;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__buttons {
+    display: flex;
+}
+
+.fake-button {
+    background-color: #555;
+    color: #aaa;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fake-button:hover {
+    background-color: #777;
+}
+
+.header__title img {
+    width: 50px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle;
+}
+
+/* Aside styles */
+.aside {
+    background: rgba(0, 0, 0, 0.7); /* Dark background for aside with some transparency */
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+/* Navigation styles */
+.nav {
+    background: rgba(0, 0, 0, 0.7); /* Dark background for navigation with some transparency */
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #aaaaff; /* Lighter color for navigation links */
+    font-weight: bold;
+}
+
+/* Footer styles */
+.footer {
+    background: rgba(0, 0, 0, 0.5); /* Dark background for footer with some transparency */
+    color: #ccc; /* Darker text color for footer */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #ddd; /* Text color for sections */
+    background: rgba(0, 0, 0, 0.5); /* Dark background for sections with some transparency */
+}
+
+/* Override styles for the huge-image section */
+#huge-image {
+    background: none; /* Remove background for the huge-image section */
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Additional styles for the image itself */
+#huge-image img {
+    display: none; /* Hide the image element as it's now a background */
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    padding: 15px;
+}
+
+.image-container {
+     position: relative;
+     overflow: hidden;
+ }
+
+.image-container img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(0.98);
+    filter: brightness(125%);
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #4CAF50;
+    border-radius: 8px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover::before {
+    opacity: 1;
+}
+
+.image-description {
+    color: #ddd;
+    margin-top: 10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.image-container:hover .image-description {
+    color: #4CAF50;
+}
+
+.table-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.table-header {
+    font-weight: bold;
+    font-size: large;
+}
+.table-header, .table-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgba(125, 125, 125, 0.8);
+    color: #ddd;
+    padding: 0;
+}
+.table-cell {
+    background-color: rgba(125, 125, 125, 0);
+    color: #ddd;
+    padding: 20px;
+}
+
+.table-row:nth-child(even) {
+    background-color: rgba(68, 68, 68, 0.8);
+}
+.table-row:nth-child(odd) {
+    background-color: rgba(95, 95, 95, 0.8);
+}
+.table-row > div:first-child {
+    background-color: rgba(125, 125, 125, 0.8);
+}
+
+.article__title,
+.nav__title,
+.header__title {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.article__title::after,
+.nav__title::after,
+.header__title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #4CAF50;
+    bottom: -5px;
+    left: 0;
+    opacity: 1;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.article__title:hover::after,
+.nav__title:hover::after,
+.header__title:hover::after {
+    background-color: #FF91A4;
+}
+
+.table-container__title {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.table-container__title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #FF91A4;
+    bottom: -2px;
+    left: 0;
+    opacity: 0;
+    transition: width 0.7s ease, opacity 0.5s ease;
+}
+
+.table-container__title:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px){
+    .article__quote {
+        display: none;
+    }
+
+    .image-container {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
