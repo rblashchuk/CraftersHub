@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Minecraft, Майнкрафт">
+    <meta name="description" content="Сообщество по майнкрафту">
+
+    <title>CraftersHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="header__title">Добро пожаловать на <span class="highlight">Crafters Hub</span>!
+        <img src="pickaxe.png" alt="Header Image">
+    </h1>
+    <div class="header__buttons">
+        <button class="fake-button">Регистрация</button>
+        <button class="fake-button">Войти</button>
+        <button class="fake-button">Мой Профиль</button>
+    </div>
+</header>
+
+<main class="main">
+    <div id="nav-container"></div>
+    <script src="loadNav.js"></script>
+
+    <!-- Content Section -->
+    <div class="main-content-grid">
+        <div class="grid-item grid-item-3to1">
+            <div class="main-content-grid">
+                <div class ="grid-item grid-item-full">
+                    <section class="section">
+                        <h2>Добро пожаловать на Crafters Hub!</h2>
+                        <p>Присоединяйтесь к нашему сообществу Minecraft. Мы - любители Minecraft, объединенные общей страстью к приключениям в удивительном мире майнкрафта.</p>
+                    </section>
+                </div>
+                <div class="grid-item grid-item-full">
+                    <section class="section">
+                        <h2>События и объявления</h2>
+                        <p>Узнайте о предстоящих событиях в нашем сообществе и интересных объявлениях.</p>
+                        <div class="image-row">
+                            <div class="image-container">
+                                <img src="design.jpg" alt="Design">
+                                <p class="image-description">Объявлен конкурс на самый креативный дизайн!</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="pvp.jpg" alt="PVP">
+                                <p class="image-description">Эпичное состязание PVP! Сразись с чемпионами майнкрафта</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="roleplay.jpg" alt="Roleplay">
+                                <p class="image-description">Новый Roleplay сервер - MeAndTheBois2! присоединяйтесь!</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="grid-item grid-item-full">
+                    <section class="section">
+                            <h2>Присоединяйтесь к нашему сообществу</h2>
+                            <p>Станьте частью Crafters Hub. Регистрируйтесь сегодня и начинайте погружение в мир Minecraft!</p>
+                            <button class="fake-button">Присоединиться</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item grid-item-1to3">
+            <div class="offer-box">
+                <h3>Подпишитесь на нашу рассылку</h3>
+                <p>Будьте в курсе последних событий и новостей. Получайте уведомления о новых материалах.</p>
+                <form action="#" method="post" class="subscribe-form">
+                    <label for="email">Ваш Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <button type="submit" class="fake-button">Подписаться</button>
+                </form>
+            </div>
+            <h3>Предложения наших партнеров:</h3>
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="vulkan.jpg" alt="Image 2">
+                    <p class="image-description">Подарки!</p>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="azn.png" alt="Image 7">
+                    <p class="image-description">Призы!</p>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="tinkok.png" alt="Image 8">
+                    <p class="image-description">Розыгрыши!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer grid-container">
+    <div class="grid-item grid-item-12">
+        <p class="footer__text">&copy; 2023 Crafters Hub. Все права не защищены.</p>
+    </div>
+</footer>
+
+<script src="activeNav.js"></script>
+</body>
+
+</html>
