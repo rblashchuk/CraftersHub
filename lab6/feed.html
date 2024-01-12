@@ -49,7 +49,6 @@
     <p class="footer__text">&copy; 2023 Crafters Hub. Все права не защищены.</p>
 </footer>
 <script src="activeNav.js"></script>
-<!-- Добавьте этот скрипт в ваш HTML-файл после основного контента -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         // Показываем индикатор загрузки
@@ -64,16 +63,13 @@
                     return response.json();
                 })
                 .then(data => {
-                    // Успешно загружены данные, обновляем таблицу
                     updateTable(data);
                 })
                 .catch(error => {
-                    // Обработка ошибок при загрузке данных
-                    console.error('Error fetching data:', error);
-                    // Можете заменить индикатор ошибкой или принять другие меры
+                    console.error('Error fetching data:', error)
                     showError();
                 });
-        }, 3000); // Имитация долгой загрузки в течение 3 секунд
+        }, 3000);
     });
 
     function updateTable(data) {
@@ -82,7 +78,6 @@
             showError();
             return;
         }
-        // Создаем HTML-разметку таблицы с заголовком
 
         const filtered = data.filter(post => post.userId % 2 == 0 && post.id % 2 == 0)
 
@@ -96,7 +91,6 @@
         </div>
     `;
 
-        // Добавляем строки данных
         filtered.forEach(post => {
             tableHTML += `
             <div class="table-row">
@@ -108,12 +102,10 @@
         `;
         });
 
-        // Заменяем индикатор загрузки на таблицу с данными
         document.querySelector('.table-container').innerHTML = tableHTML;
     }
 
     function showError() {
-        // Заменяем индикатор загрузки на изображение и текст ошибки
         document.querySelector('.table-container').innerHTML = `
         <img src="sheep_failed.png" alt="Failed to load">
         <p>Ой, что-то пошло не так.</p>
