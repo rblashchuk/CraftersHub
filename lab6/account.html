@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Minecraft, Майнкрафт">
+    <meta name="description" content="Личный кабинет пользователя на CraftersHub">
+
+    <title>Личный кабинет - CraftersHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="header">
+</header>
+
+<main class="main">
+    <div id="nav-container"></div>
+    <script src="loadNav.js"></script>
+
+    <div class="main-content-grid">
+        <div class="grid-item grid-item-full">
+            <section class="section">
+                <div id="welcomeBlock" style="display: none;"></div>
+
+                <form id="registrationForm">
+                    <label for="firstName">Имя:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+
+                    <label for="lastName">Фамилия:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+
+                    <label for="nickname">Ник:</label>
+                    <input type="text" id="nickname" name="nickname" required>
+
+                    <label for="avatar">Аватар (URL):</label>
+                    <input type="url" id="avatar" name="avatar" required>
+
+                    <button type="button" onclick="register()">Зарегистрироваться</button>
+                </form>
+
+                <div id="userWall">
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer class="footer grid-container">
+</footer>
+
+<script src="activeNav.js"></script>
+<script src="account.js"></script>
+</body>
+
+</html>
