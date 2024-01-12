@@ -1,6 +1,6 @@
 // вывода приветсвенного уведомления.
 var hidden = false
-function showHello() {
+function showStartNotification() {
     iziToast.show({
         title: 'Привет! Это общий чат, присоединяйся к общению!',
         position: 'bottomRight',
@@ -109,6 +109,6 @@ function showRandomNotification() {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    showHello(); // кидаем стартовую нотификацию
+    showStartNotification(); // кидаем стартовую нотификацию
     showRandomNotification(); // запускаем поток случайных
 });
